@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curan cat🐱</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #1a1a2e;
+            color: #e0e0e0;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #ff79c6;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            border-bottom: 3px solid #bd93f9;
+            padding-bottom: 10px;
+        }
+        h2 {
+            font-size: 2em;
+            border-bottom: 2px solid #bd93f9;
+            padding-bottom: 8px;
+        }
+        .profile-link {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .game-section {
+            background-color: #2a2a4a;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 40px auto;
+            max-width: 600px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        .iframe-container {
+            margin-bottom: 20px;
+        }
+        /* Ajuste do iframe para ficar mais compacto */
+        .iframe-container iframe {
+            width: 100%;
+            height: 167px; /* Mantém a altura original para não distorcer */
+            border-radius: 8px;
+            border: none;
+        }
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .btn {
+            background-color: #bd93f9;
+            color: #1a1a2e;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1em;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .btn:hover {
+            background-color: #ff79c6;
+            transform: translateY(-2px);
+            color: #fff;
+        }
+        /* Estilos para o popup */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.6);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #2a2a4a;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #bd93f9;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 500px;
+            text-align: left;
+            position: relative;
+        }
+        .close-btn {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .description-text {
+            white-space: pre-wrap;
+            color: #c0c0c0;
+            max-height: 400px;
+            overflow-y: auto;
+            padding-right: 15px; /* Para a barra de rolagem não ficar colada no texto */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Curan cat🐱</h1>
+    <div class="profile-link">
+        <a href="https://curancat.itch.io/" class="btn" target="_blank">Perfil do Desenvolvedor</a>
+    </div>
+
+    <div class="game-section">
+        <h2>THRYLOS</h2>
+        <div class="iframe-container">
+            <iframe src="https://itch.io/embed/3894987"></iframe>
+        </div>
+        <div class="button-group">
+            <a href="https://itch.io/blog/1037075/thrylos" class="btn" target="_blank">Ver Post</a>
+            <button class="btn" onclick="openModal('thrylosModal')">Descrição</button>
+        </div>
+    </div>
+
+    <div class="game-section">
+        <h2>Axel</h2>
+        <div class="iframe-container">
+            <iframe src="https://itch.io/embed/3889937"></iframe>
+        </div>
+        <div class="button-group">
+            <a href="https://itch.io/blog/1037064/axel-aprenda-a-se-defender-de-golpes" class="btn" target="_blank">Ver Post</a>
+            <button class="btn" onclick="openModal('axelModal')">Descrição</button>
+        </div>
+    </div>
+
+    <div id="thrylosModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('thrylosModal')">&times;</span>
+            <h2>Descrição de Thrylos</h2>
+            <div class="description-text">
+                Prepare-se para embarcar no universo de Thrylos, um RPG por turnos, onde seu objetivo principal é se consagrar como o guerreiro mais poderoso!
+
+                🚀 Esta é a versão beta, trazendo tudo o que você precisa para dar início à sua jornada memorável.
+
+                # O Que Aguarda Você?
+
+                Thrylos é um RPG textual com uma interface de combate dinâmica e cheia de cores, que simula duelos incríveis contra monstros diversos.
+                Escolha sua classe, lute bravamente e evolua para se tornar imbatível. 
+                O jogo oferece diversas classes de personagens, cada uma com poderes e vantagens únicas. Você se identifica mais com a força bruta de um Bárbaro, o poder mágico de um Mago ou a agilidade de um Ladino? A decisão é sua! Encare oponentes formidáveis, como Goblins e Ogros, em combates estratégicos por turnos. Elabore seus ataques, defenda-se com precisão e utilize itens para garantir sua vitória.
+
+                Além das batalhas, o jogo possui um sistema de inventário completo.
+                Colete créditos e recursos para adquirir e criar itens. 
+                Seu inventário é a chave para o sucesso! Invista seus créditos na Loja para comprar poções e suprimentos. 
+                Use a Mesa de Forja para criar armas e armaduras únicas, como a "Espada de Ferro" e a "Lâmina de Aço". 
+                Teste sua sorte no mini-game de forja para criar itens de altíssima qualidade! Você também pode aprimorar seus equipamentos para aumentar o dano e a defesa, ou restaurar a durabilidade de seus itens para que durem mais tempo nas batalhas. 
+                Se precisar de um descanso, gaste alguns créditos para relaxar na Tenda de Descanso, recuperando completamente sua vida e mana e eliminando todos os efeitos negativos.
+
+                # Notas Importantes:
+
+                ⚠️ Idioma em Português: O jogo está totalmente traduzido para o português.
+
+                ⚠️ Versão Beta: Esta é uma versão em desenvolvimento, portanto, espere encontrar alguns bugs ou funcionalidades ainda não implementadas.
+
+                ⚠️ Utilização de Cores: O jogo utiliza códigos de cores ANSI para enriquecer a experiência visual. Verifique se o seu terminal suporta essas cores para uma exibição correta.
+
+                ⚠️ O arquivo é um ( .exe): Este arquivo foi criado para ser executado como um programa independente após ser convertido para `.exe`. Basta executar o arquivo e a aventura começa!
+
+                Thrylos é uma aventura envolvente onde cada escolha é importante. Seu objetivo é claro: tornar-se poderoso. Molde seu destino, vença seus adversários e torne-se uma lenda! 🏆
+            </div>
+        </div>
+    </div>
+
+    <div id="axelModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('axelModal')">&times;</span>
+            <h2>Descrição de Axel</h2>
+            <div class="description-text">
+                Você está prestes a baixar o arquivo "axel.zip".
+ 
+                Este arquivo não é um vírus. Ele é um simulador de golpes virtuais criado com o objetivo de educar e conscientizar sobre as táticas usadas por crimes. Ao repeti-lo, você verá exemplos de como os golpes ocorridos, o que vai te ajudar a considerar essas situações no mundo real e se proteger.
+ 
+                Aviso: O Windows ou seu antivírus pode alertar sobre o arquivo, já que ele simula comportamentos de programas maliciosos para fins de aprendizado. Você deve obrigatoriamente com a instalação de sua conta e risco, apenas com a intenção de estudos
+ 
+                * As simulações são ilustrações, não garantem que a pessoa estará pronta para todas as táticas avançadas dos criminosos.
+ 
+                * Atualize os cenários constantemente (os golpes mudam).
+ 
+                * Use o Axel junto com medidas técnicas (filtros de e-mail, autenticação reforçada, acompanhamento de contas) para uma proteção de verdade.
+ 
+                Comandos:
+                (Help) -listar comandos
+                (Golpear) -incia a simulação 
+                { Link/ip(opcional)/pegar/vender} - coleção de arquivos
+                {Criar vírus( após esse comando seu email vai abrir )/ Depois disso, no Axel, considere em cadastrar os dados que a inteligência artificial vai disponibilizar /vender} - coletar dados
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
